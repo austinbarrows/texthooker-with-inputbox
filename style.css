@@ -1,0 +1,25 @@
+
+
+body {
+	background-color: #202020;
+	color: #BCBCBC;
+	font-size: 50px;
+	font-weight: 400;
+	line-height:150%;
+	font-family: "Noto Serif JP", "Meiryo", serif;
+}
+
+main {
+	margin-top:10px;
+	padding-top: 5px;
+	position: relative;
+	bottom: 70px;
+}
+
+#bottom-textbox {
+	font-size:50px;
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+}
+
