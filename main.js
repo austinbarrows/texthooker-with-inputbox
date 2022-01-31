@@ -7,9 +7,9 @@ function addLine() {
 }
 
 
+// Code to scroll down every time body is modified (i.e. when <p> elements are added)
 const el = document.getElementById('autopaste-box');
 const callback = function(mutationsList, observer) {
-    console.log('working');
     window.scrollTo(0, document.body.scrollHeight);
 };
 const config = { attributes: true, childList: true, subtree: true };
