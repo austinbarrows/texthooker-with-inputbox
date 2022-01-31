@@ -10,7 +10,10 @@
 </head>
 <body>
     <main id="autopaste-box"></main>
-    <input type="text" size="30" id="bottom-textbox">
+    <form action="" onsubmit="addLine(); return false" id="bottom-textbox">
+        <input type="text" size="30" id="line-input">
+        <button id="add-line-button">Add</button>
+    </form>
 </body>
 <script src="main.js"></script>
 </html>
