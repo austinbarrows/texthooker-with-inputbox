@@ -6,6 +6,9 @@ function addLine() {
     pasteBox.append(p);
 }
 
+window.onfocus = function () { 
+    document.getElementById("line-input").focus();
+}; 
 
 // Code to scroll down every time body is modified (i.e. when <p> elements are added)
 const el = document.getElementById('autopaste-box');
