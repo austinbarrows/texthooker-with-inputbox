@@ -6,6 +6,12 @@ function addLine() {
     pasteBox.append(p);
 }
 
+// Make width of autopaste box width of window excluding the scrollbar
+function setPasteboxWidth() {
+    const pasteBox = document.getElementById('autopaste-box');
+    pasteBox.style.width = `${document.body.clientWidth - 10}px`;
+}
+
 window.onfocus = function () { 
     document.getElementById("line-input").focus();
 }; 
@@ -18,3 +24,9 @@ const callback = function(mutationsList, observer) {
 const config = { attributes: true, childList: true, subtree: true };
 const observer = new MutationObserver(callback);
 observer.observe(el, config);
+
+// Set pastebox width at the start and then only when the window is resized
+setPasteboxWidth();
+window.onresize = function () {
+    setPasteboxWidth();
+}
